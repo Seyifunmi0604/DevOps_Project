@@ -1,6 +1,21 @@
 # PROJECT 1: LAMP STACK IMPLEMENTATION
 ## WEB STACK IMPLEMENTATION (LAMP STACK) IN AWS
-Step 0 – Preparing prerequisites
+
+**Below are the steps involved**
+
+•	Web stack implementation (lamp stack) in aws
+
+•	Step 1 — installing apache and updating the firewall
+
+•	Step 2 — installing mysql
+
+•	Step 3 — installing php
+
+•	Step 4 — creating a virtual host for your website using apache
+
+•	Step 5 — enable php on the website
+
+**Step 0** – Preparing prerequisites
 In order to complete this project you will need an AWS account and a virtual server with Ubuntu Server OS.
 AWS is the biggest Cloud Service Provider and it offers a free tier account that we are going to leverage for our projects.
 Do not focus too much on AWS itself right now, there will be a proper Cloud introduction and configuration projects later in our course.
