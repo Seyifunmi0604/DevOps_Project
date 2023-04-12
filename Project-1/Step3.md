@@ -2,7 +2,7 @@ Apache has been installed to serve our content and MySQL installed to store and 
 
 Apache has been installed to serve our content and MySQL installed to store and manage our data. 
 
-PHP https://www.php.net/ is the component of our setup that will process code to display dynamic content to the end user. 
+[PHP](https://www.php.net/) is the component of our setup that will process code to display dynamic content to the end user. 
 
 In addition to the php package, you’ll need php-mysql, a PHP module that allows PHP to communicate with MySQL-based databases. You’ll also need libapache2-mod-php to enable Apache to handle PHP files. Core PHP packages will automatically be installed as dependencies.
 
