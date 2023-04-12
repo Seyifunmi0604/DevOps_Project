@@ -1,13 +1,13 @@
 # STEP1 INSTALLING APACHE AND UPDATING THE FIREWALL
 What exactly is Apache?
-Apache HTTP Server is the most widely used web server software. Developed and maintained by Apache Software Foundation, Apache is an open source software available for free. It runs on 67% of all webservers in the world. It is fast, reliable, and secure. 
-Welcome! - The Apache HTTP Server Project.
+[Apache HTTP Server](https://httpd.apache.org/) is the most widely used web server software. Developed and maintained by Apache Software Foundation, Apache is an open source software available for free. It runs on 67% of all webservers in the world. It is fast, reliable, and secure. 
+[Welcome! - The Apache HTTP Server Project](https://httpd.apache.org/).
 
-It can be highly customized to meet the needs of many different environments by using extensions and modules. Most WordPress hosting providers use Apache as their web server software. However, websites and other applications can run on other web server software as well. Such as Nginx, Microsoft’s IIS, etc.
+It can be highly customized to meet the needs of many different environments by using extensions and modules. Most WordPress hosting providers use Apache as their web server software. However, websites and other applications can run on other web server software as well. Such as [Nginx](https://www.nginx.com/), [Microsoft’s IIS](https://www.iis.net/), etc.
 
 The Apache web server is among the most popular web servers in the world. It’s well documented, has an active community of users, and has been in wide use for much of the history of the web, which makes it a great default choice for hosting a website.
 
-Install Apache using Ubuntu’s package manager ‘apt’:
+Install Apache using Ubuntu’s package manager [‘apt’](https://en.wikipedia.org/wiki/APT_(software)):
 
 #update a list of packages in package manager
 
@@ -56,5 +56,5 @@ http://107.21.86.229:80
   
 ![Picture1 5](https://user-images.githubusercontent.com/130314772/231009661-fa847016-8ecd-4699-8506-e18b7e27f2e3.png)
 
-In fact, it is the same content that you previously got by ‘curl’ command, but represented in nice HTML formatting by your web browser.
+In fact, it is the same content that you previously got by ‘curl’ command, but represented in nice [HTML](https://en.wikipedia.org/wiki/HTML) formatting by your web browser.
 
