@@ -12,9 +12,17 @@
 
 •	Double check .env file to make sure the appropriate Database connection string is passed.
 
-•	Check if user existed on your MongoDB server, especially if you have initially stopped your EC2 instance, plus the 6hrs duration has expired. Create user with password or auto generate password if not existed, and update your **.env file.
+•	Check if user existed on your MongoDB server, especially if you have initially stopped your EC2 instance, plus the 6hrs duration has expired. Create user with password or auto generate password if not existed.
+
+•	Grab your connection string and update your .env file.
 
 ![Picture1 2](https://user-images.githubusercontent.com/130314772/233026022-8e6ab5eb-f52d-48b2-b2b5-dc2830995ca8.png)
+
+![Picture1 6](https://user-images.githubusercontent.com/130314772/233029971-d13579ff-271a-4eaa-9314-2d02d61bed1d.png)
+
+To navigate to grab your connection string
+
+![Picture1 7](https://user-images.githubusercontent.com/130314772/233031710-04c0bd26-c774-402c-a5ec-ddf1148e56f6.png)
 
 Try and reconnect: **node index.js**
 
