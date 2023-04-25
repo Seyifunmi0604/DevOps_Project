@@ -1,16 +1,26 @@
-TASK :
-Complete all these 10 tasks into a single shell script
+## TASK :
 
-Ask the user for their name and age, and output a message with their name and the year they were born.
-Create a new directory with a name provided by the user, and navigate into it.
-List all files in the current directory, sorted by file size.
-Count the number of files in the current directory and output the result.
-Take a list of numbers as input from the user and output the sum of those numbers.
-Output a random number between 1 and 100.
-Create a backup of a specified file by copying it to a backup directory with a timestamp in the filename.
-Check if a website is online and output a message indicating whether it is up or down.
-Convert a temperature in Celsius to Fahrenheit, using input from the user.
-Ask the user for a sentence, then output the sentence in reverse order. For example, if the user enters “Hello, world!”, the script should output “!dlrow ,olleH”.
+# Complete all these 10 tasks into a single shell script
+
+1. Ask the user for their name and age, and output a message with their name and the year they were born.
+
+2. Create a new directory with a name provided by the user, and navigate into it.
+
+3. List all files in the current directory, sorted by file size.
+
+4. Count the number of files in the current directory and output the result.
+
+5. Take a list of numbers as input from the user and output the sum of those numbers.
+
+6. Output a random number between 1 and 100.
+
+7. Create a backup of a specified file by copying it to a backup directory with a timestamp in the filename.
+
+8. Check if a website is online and output a message indicating whether it is up or down.
+
+9. Convert a temperature in Celsius to Fahrenheit, using input from the user.
+
+10. Ask the user for a sentence, then output the sentence in reverse order. For example, if the user enters “Hello, world!”, the script should output “!dlrow ,olleH”.
 
 Create the project folder called Shell
 
