@@ -3,25 +3,19 @@
 Node.js is a JavaScript runtime built on Chrome’s V8 JavaScript engine. Node.js is used in this tutorial to set up the Express routes and AngularJS controllers.
 
 Update ubuntu
+```
+sudo apt update
+```
 
-<div id="code-container">
-  <pre><code>sudo apt update</code></pre>
-  <button class="btn" data-clipboard-target="#code-container"><i class="fa fa-copy"></i> Copy</button>
-</div>
 
 **Upgrade ubuntu**
-
-<div id="code-container">
-  <pre><code>sudo apt upgrade</code></pre>
-  <button class="btn" data-clipboard-target="#code-container"><i class="fa fa-copy"></i> Copy</button>
-</div>
-
+```
+sudo apt upgrade
+```
 **Install NodeJS**
-
-<div id="code-container">
-  <pre><code>sudo apt install -y nodejs</code></pre>
-  <button class="btn" data-clipboard-target="#code-container"><i class="fa fa-copy"></i> Copy</button>
-</div>
+```
+sudo apt install -y nodejs
+```
 
 To confirm the installation
 
