@@ -5,30 +5,23 @@
 Express is a minimal and flexible Node.js web application framework that provides features for web and mobile applications. We will use Express in to pass book information to and from our MongoDB database.
 
 We also will use [Mongoose](https://mongoosejs.com/) package which provides a straight-forward, schema-based solution to model your application data. We will use Mongoose to establish a schema for the database to store data of our book register.
-
-<div id="code-container">
-  <pre><code>sudo npm install express mongoose</code></pre>
-  <button class="btn" data-clipboard-target="#code-container"><i class="fa fa-copy"></i> Copy</button>
-</div>
+```
+sudo npm install express mongoose
+```
 
 In ‘Books’ folder, create a folder named apps
-
-<div id="code-container">
-  <pre><code>mkdir apps && cd apps</code></pre>
-  <button class="btn" data-clipboard-target="#code-container"><i class="fa fa-copy"></i> Copy</button>
-</div>
+```
+mkdir apps && cd apps
+```
 
 Create a file named routes.js
-
-<div id="code-container">
-  <pre><code>vi routes.js</code></pre>
-  <button class="btn" data-clipboard-target="#code-container"><i class="fa fa-copy"></i> Copy</button>
-</div>
+```
+vi routes.js
+```
 
 Copy and paste the code below into routes.js
-
-<div id="code-container">
-  <pre><code>var Book = require('./models/book');
+```
+var Book = require('./models/book');
 module.exports = function(app) {
   app.get('/book', function(req, res) {
     Book.find({}, function(err, result) {
@@ -65,28 +58,22 @@ module.exports = function(app) {
     res.sendfile(path.join(__dirname + '/public', 'index.html'));
   });
 };
-</code></pre>
-  <button class="btn" data-clipboard-target="#code-container"><i class="fa fa-copy"></i> Copy</button>
-</div>
+```
 
 **In the ‘apps’ folder, create a folder named models**
-
-<div id="code-container">
-  <pre><code>mkdir models && cd models</code></pre>
-  <button class="btn" data-clipboard-target="#code-container"><i class="fa fa-copy"></i> Copy</button>
-</div>
+```
+mkdir models && cd models
+```
 
 Create a file named book.js
-
-<div id="code-container">
-  <pre><code>vi book.js</code></pre>
-  <button class="btn" data-clipboard-target="#code-container"><i class="fa fa-copy"></i> Copy</button>
-</div>
+```
+vi book.js
+```
 
 Copy and paste the code below into ‘book.js’
 
-<div id="code-container">
-  <pre><code>var mongoose = require('mongoose');
+```
+var mongoose = require('mongoose');
 var dbHost = 'mongodb://localhost:27017/test';
 mongoose.connect(dbHost);
 mongoose.connection;
@@ -99,8 +86,7 @@ var bookSchema = mongoose.Schema( {
 });
 var Book = mongoose.model('Book', bookSchema);
 module.exports = mongoose.model('Book', bookSchema);
-</code></pre>
-  <button class="btn" data-clipboard-target="#code-container"><i class="fa fa-copy"></i> Copy</button>
-</div>
+
+```
 
 
