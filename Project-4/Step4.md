@@ -68,7 +68,7 @@ app.controller('myCtrl', function($scope, $http) {
 </div>
 
 **In public folder, create a file named index.html;**
-
+```
 <!doctype html>
 <html ng-app="myApp" ng-controller="myCtrl">
   <head>
@@ -119,3 +119,5 @@ app.controller('myCtrl', function($scope, $http) {
     </div>
   </body>
 </html>
+
+```
