@@ -19,8 +19,8 @@ vi script.j
 
 Copy and paste the Code below (controller configuration defined) into the script.js file.
 
-<div id="code-container">
-  <pre><code>var app = angular.module('myApp', []);
+```
+var app = angular.module('myApp', []);
 app.controller('myCtrl', function($scope, $http) {
   $http( {
     method: 'GET',
@@ -57,9 +57,8 @@ app.controller('myCtrl', function($scope, $http) {
     });
   };
 });
-</code></pre>
-  <button class="btn" data-clipboard-target="#code-container"><i class="fa fa-copy"></i> Copy</button>
-</div>
+
+```
 
 **In public folder, create a file named index.html;**
 ```
