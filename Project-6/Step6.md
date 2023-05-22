@@ -50,8 +50,11 @@ ls -l wordpress/
 ![Picture1 6](https://github.com/Seyifunmi0604/DevOps_Project/assets/130314772/eae951fa-b380-40ca-9d2f-ec6d08704eea)
 
 ![Picture1 7](https://github.com/Seyifunmi0604/DevOps_Project/assets/130314772/648ddcdf-b171-4121-983e-89e7f098cb8a)
+  
+![Picture1 9](https://github.com/Seyifunmi0604/DevOps_Project/assets/130314772/0efe5abb-bd72-4059-8440-bf00fb0b35b3)
+  
+![Picture1 8](https://github.com/Seyifunmi0604/DevOps_Project/assets/130314772/f5bf1151-3658-453d-9cfa-49bc89da0fbf)
 
-![Picture1 7](https://github.com/Seyifunmi0604/DevOps_Project/assets/130314772/fda4f84c-3bbe-448b-81fe-5223086b43b5)
 
 
 
