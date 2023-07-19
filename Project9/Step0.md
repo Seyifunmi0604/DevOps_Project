@@ -4,11 +4,11 @@
 
 ## Steps of What to do
 
-**i. Tooling website deployment automation with continuous integration. introduction to jenkins**
+**0. Tooling website deployment automation with continuous integration. introduction to jenkins**
 
-**ii. Install and configure jenkins server**
+**1. Install and configure jenkins server**
 
-**iii. Configure jenkins to copy files to nfs server via ssh**
+**2. Configure jenkins to copy files to nfs server via ssh**
 
 In previous Project 8 we introduced horizontal scalability concept, which allow us to add new Web Servers to our Tooling Website and you have successfully deployed a setup with 2 Web Servers and also a Load Balancer to distribute traffic between them. If it is just two or three servers – it is not a big deal to configure them manually. Imagine that you would need to repeat the same task over and over again adding dozens or even hundreds of servers.
 
