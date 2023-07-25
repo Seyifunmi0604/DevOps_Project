@@ -176,11 +176,23 @@ To make your new branch show up in Jenkins, we need to tell Jenkins to scan the 
 
 6. Eventually, your main branch should have a successful pipeline like this in blue ocean
 
+**SOLUTION to the QUICK Task**
 
+![14 36](https://github.com/Seyifunmi0604/DevOps_Project/assets/130314772/a967452c-5036-4b4f-9628-16d0f2fb75d0)
 
+![14 37](https://github.com/Seyifunmi0604/DevOps_Project/assets/130314772/02ac8727-ae70-4e82-b1ac-826726fcdf4a)
 
+git checkout -b dev
 
+![14 38](https://github.com/Seyifunmi0604/DevOps_Project/assets/130314772/52a56194-fe58-4811-b265-8fa6e5fa9ef9)
 
+![14 39](https://github.com/Seyifunmi0604/DevOps_Project/assets/130314772/783cdd3b-9a90-4921-9fac-e6b5525f72de)
+
+![14 40](https://github.com/Seyifunmi0604/DevOps_Project/assets/130314772/a97d168b-9e96-4794-879b-384ac4206b76)
+
+![14 41](https://github.com/Seyifunmi0604/DevOps_Project/assets/130314772/d8692902-b3da-48e4-9e28-13d6e42e8394)
+
+![14 42](https://github.com/Seyifunmi0604/DevOps_Project/assets/130314772/bffa50d2-d631-47a3-bd28-663c7c2da2f7)
 
 
 
