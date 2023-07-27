@@ -284,6 +284,142 @@ wget -O phpunit https://phar.phpunit.de/phpunit-7.phar
 chmod +x phpunit
 sudo yum  install php-xdebug
 ```
+![14 61](https://github.com/Seyifunmi0604/DevOps_Project/assets/130314772/3a0f8a49-c8a8-488f-97da-aa9c8b9a02c8)
+
+You should now see a Plot menu item on the left menu. Click on it to see the charts. (The analytics may not mean much to you as it is meant to be read by developers. So, you need not worry much about it – this is just to give you an idea of the real-world implementation).
+
+![14 62](https://github.com/Seyifunmi0604/DevOps_Project/assets/130314772/f47d4920-f1f3-4cb8-8df2-b8e92ac62aae)
+
+
+3.	Bundle the application code for into an artifact (archived package) upload to Artifactory
+   
+Install zip: 
+
+```
+sudo yum install zip -y
+```
+
+```
+stage ('Package Artifact') {
+    steps {
+            sh 'zip -qr php-todo.zip ${WORKSPACE}/*'
+     }
+    }
+```
+
+5.	Publish the resulted artifact into Artifactory
+   
+```
+stage ('Upload Artifact to Artifactory') {
+          steps {
+            script { 
+                 def server = Artifactory.server 'artifactory-server'                 
+                 def uploadSpec = """{
+                    "files": [
+                      {
+                       "pattern": "php-todo.zip",
+                       "target": "<name-of-artifact-repository>/php-todo",
+                       "props": "type=zip;status=ready"
+
+                       }
+                    ]
+                 }""" 
+
+                 server.upload spec: uploadSpec
+               }
+            }
+
+        }
+```
+
+![14 63](https://github.com/Seyifunmi0604/DevOps_Project/assets/130314772/ddb2ad1c-1fa7-450c-9f1c-9722c87255fe)
+
+**Commit the changes and push to git**
+
+![14 64](https://github.com/Seyifunmi0604/DevOps_Project/assets/130314772/735afdde-a1c0-4c45-81eb-491dddc71553)
+
+![14 65](https://github.com/Seyifunmi0604/DevOps_Project/assets/130314772/1d1deed0-0865-4ffb-9734-345c2fa75a95)
+
+![14 66](https://github.com/Seyifunmi0604/DevOps_Project/assets/130314772/bcfad995-b27a-45c2-a2d3-537e8ce9d5e8)
+
+5.	Deploy the application to the dev environment by launching Ansible pipeline
+
+```
+stage ('Deploy to Dev Environment') {
+    steps {
+    build job: 'ansible-project/main', parameters: [[$class: 'StringParameterValue', name: 'env', value: 'dev']], propagate: false, wait: true
+    }
+  }
+```
+
+The **build job** used in this step tells Jenkins to start another job. In this case it is the **ansible-project** job, and we are targeting the **main** branch. Hence, we have **ansible-project/main**. Since the Ansible project requires parameters to be passed in, we have included this by specifying the parameters section. The name of the **parameter** is env and its value is **dev**. Meaning, deploy to the Development environment.
+
+![14 67](https://github.com/Seyifunmi0604/DevOps_Project/assets/130314772/43c313ac-67ca-4257-8cde-856ada626d72)
+
+**Spin up ec2 instance for todo-server (our web application)**
+
+update **inventory/dev** with [todo] credentials and update **playbooks/site.yml**
+
+**inventory/dev**
+
+![14 69](https://github.com/Seyifunmi0604/DevOps_Project/assets/130314772/97612785-1090-40d2-bc0f-35e3ce9f7feb)
+
+**playbooks/site.yml**
+
+![14 70](https://github.com/Seyifunmi0604/DevOps_Project/assets/130314772/d6df0d2d-bc46-4f1a-b194-e1179dac518e)
+
+since the changes we made are on proj14-ansible-config, hence switch back to proj14-ansible-config, commit and push the changes
+
+![14 71](https://github.com/Seyifunmi0604/DevOps_Project/assets/130314772/b23984ac-a37f-4e0d-b359-b4766cae2292)
+
+Update **static-assignment/deployment.yml**
+
+Setup the password encryption in JFROG
+
+![14 72](https://github.com/Seyifunmi0604/DevOps_Project/assets/130314772/22677122-dd7a-401f-9545-aad140022cda)
+
+![14 73](https://github.com/Seyifunmi0604/DevOps_Project/assets/130314772/dbf4aac1-c509-4fee-a362-3b2e1ab8e341)
+
+![14 74](https://github.com/Seyifunmi0604/DevOps_Project/assets/130314772/dbef687d-38a9-43aa-b0ed-cc8ea32f6751)
+
+**Commit and push the changes from both workspace proj14-ansible-config and php-todo**
+
+Run the job from both **proj14-ansible-config** and **php-todo**
+
+**php-todo**
+
+![14 75](https://github.com/Seyifunmi0604/DevOps_Project/assets/130314772/5bc099e9-4384-4729-a6d2-b1ce34c4b79a)
+
+**proj14-ansible-config**
+
+![14 76](https://github.com/Seyifunmi0604/DevOps_Project/assets/130314772/3bc8fdb4-7dd1-4cdd-97ee-55bd420ebe19)
+
+![14 77](https://github.com/Seyifunmi0604/DevOps_Project/assets/130314772/994f03a0-0777-470f-b4cd-22fb12d60d74)
+
+**Let’s try and access todo on the browser with the public IP**
+
+![14 78](https://github.com/Seyifunmi0604/DevOps_Project/assets/130314772/9337a0a3-39a8-4293-92d2-64ae71a39c38)
+
+```
+sudo vi /etc/sysconfig/selinux 
+```
+
+![14 79](https://github.com/Seyifunmi0604/DevOps_Project/assets/130314772/81ef4e7a-8eac-48aa-9af4-8c5216612bfe)
+
+But how are we certain that the code being deployed has the quality that meets corporate and customer requirements? Even though we have implemented **Unit Tests** and **Code Coverage** Analysis with **phpunit** and **phploc**, we still need to implement Quality Gate to ensure that ONLY code with the required code coverage, and other quality standards make it through to the environments.
+To achieve this, we need to configure **SonarQube** – An open-source platform developed by **SonarSource** for continuous inspection of code quality to perform automatic reviews with static analysis of code to detect bugs, code smells, and security vulnerabilities.
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
