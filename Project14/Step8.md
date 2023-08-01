@@ -116,7 +116,13 @@ Dashboard > php-todo > Pipeline Syntax
 `
 ![14 105](https://github.com/Seyifunmi0604/DevOps_Project/assets/130314772/b65f7ef1-dd1c-494b-b008-9165596bee0d)
 
-![14 106](https://github.com/Seyifunmi0604/DevOps_Project/assets/130314772/73a84023-031a-4ff1-bf09-41e8f4a09d9e)
+![14 106](https://github.com/Seyifunmi0604/DevOps_Project/assets/130314772/899b4314-f900-4897-a686-349e3a169a1b)
+
+![14 107](https://github.com/Seyifunmi0604/DevOps_Project/assets/130314772/62eb243b-7167-4ae7-9b8e-e00b420c9d1e)
+
+![14 108](https://github.com/Seyifunmi0604/DevOps_Project/assets/130314772/6c2a5de8-c2c4-4fa5-ba4f-e0aec2754bbf)
+
+![14 109](https://github.com/Seyifunmi0604/DevOps_Project/assets/130314772/84199b91-4f35-4524-b954-6a576dbc9e46)
 
 In the development environment, this is acceptable as developers will need to keep iterating over their code towards perfection. But as a DevOps engineer working on the pipeline, we must ensure that the quality gate step causes the pipeline to fail if the conditions for quality are not met.
 
@@ -213,8 +219,6 @@ o	https://github.com/wtanaka/ansible-role-wireshark (RedHat)
 
 
 [14.video.zip](https://github.com/Seyifunmi0604/DevOps_Project/files/12226129/14.video.zip)
-
-
 
 
 Congratulations! You have just experienced one of the most interesting and complex projects in you Project Based Learning journey so far. The vast experience and knowledge you have acquired here will set the stage for the next 6 projects to come. You should be ready to start applying for DevOps jobs after completing Project 20.
